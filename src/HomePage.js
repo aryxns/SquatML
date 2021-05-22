@@ -24,10 +24,8 @@ function HomePage(){
     img.src = image;
     const detector = await poseDetection.createDetector(poseDetection.SupportedModels.MoveNet);
     const poses = await detector.estimatePoses(img);
-    if (name == ""){
-      var sign = window.prompt("Enter your name: ", "Aryan")
-      localStorage.setItem("name", sign)
-    }
+    var sign = window.prompt("Enter your name: ");
+    localStorage.setItem("name", sign);
     setTimeout(()=>{setLoading(false)}, 7000);
   }
 
@@ -93,7 +91,6 @@ function HomePage(){
     setTimeout(()=>{video_calc()}, 57000)
     setTimeout(()=>{video_calc()}, 58000)
     setTimeout(()=>{video_calc()}, 59000)
-    localStorage.setItem("reps", reps);
     setTimeout(()=>{window.location.href = "/thanks"}, 61000)
   };
 
@@ -121,6 +118,7 @@ function HomePage(){
       const adding = repcount + 1;
       repcount += 1;
       setRep(adding);
+      localStorage.setItem("reps", adding);
       console.log(adding);
     }
   };

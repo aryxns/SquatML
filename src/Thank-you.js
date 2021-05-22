@@ -1,8 +1,8 @@
 import React from "react";
 
 function ThankYou(){
-  const name = localStorage.name;
-  const reps = localStorage.reps;
+  const name = localStorage("name");
+  const reps = localStorage.getItem("reps");
   var link = "https://twitter.com/intent/tweet?text=I%20just%20did%20" + String(reps) + "%20squats%20in%20one%20minute%20on%20https://squatml.aryxns.repl.co/"; 
   return(
     <div className="w-screen bg-gray-900 fixed max-h max-w h-full">
