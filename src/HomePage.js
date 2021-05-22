@@ -91,6 +91,7 @@ function HomePage(){
     setTimeout(()=>{video_calc()}, 57000)
     setTimeout(()=>{video_calc()}, 58000)
     setTimeout(()=>{video_calc()}, 59000)
+    setTimeout(()=>{localStorage.setItem("reps", reps);}, 60000)
     setTimeout(()=>{window.location.href = "/thanks"}, 61000)
   };
 
@@ -118,7 +119,6 @@ function HomePage(){
       const adding = repcount + 1;
       repcount += 1;
       setRep(adding);
-      localStorage.setItem("reps", adding);
       console.log(adding);
     }
   };
